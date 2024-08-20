@@ -1,0 +1,1264 @@
+@import "https://fonts.googleapis.com/css2?family=Anton+SC&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Anton+SC&family=Seymour+One&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Anton+SC&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Seymour+One&display=swap";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.seccion {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px auto auto;
+  grid-template-areas: "encabezado" "contenido" "pie";
+}
+.seccion .conteiner-header {
+  grid-area: encabezado;
+  background: #012030;
+}
+.seccion #Home-desk {
+  background-image: url("../assets/images/fondo-home.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  backdrop-filter: blur(200px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.seccion .principal {
+  grid-area: contenido;
+}
+.seccion .conteiner-footer-principal {
+  grid-area: pie;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    scale: 1.1;
+  }
+}
+.btn-menu {
+  background: #DBF227;
+  font-size: 20px;
+  margin-right: 10px;
+  border: 1px solid white;
+}
+@media screen and (min-width: 768px) {
+  .btn-menu {
+    margin-right: 40px;
+  }
+}
+.btn-menu:hover {
+  background: #DBF227;
+  opacity: 0.5;
+}
+
+.btn-enviar {
+  background: #005C53;
+  text-transform: uppercase;
+  color: #dbf227;
+  width: 200px;
+  margin: 20px;
+  text-align: center;
+}
+.btn-enviar:hover {
+  color: #9FC131;
+}
+
+#home-fondo {
+  height: 100vh;
+  background-image: url("../assets/images/fondo-home.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.conteiner-header .conteiner-logo-nombre {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  margin-left: 5%;
+}
+.conteiner-header .conteiner-logo-nombre .logo {
+  height: 60px;
+  width: 60px;
+  align-items: center;
+  background: #DBF227;
+  border-radius: 25% 10%;
+}
+.conteiner-header .conteiner-logo-nombre .logo:hover {
+  opacity: 0.8;
+}
+.conteiner-header .conteiner-logo-nombre .nombre {
+  color: #DBF227;
+  font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-left: 30px;
+  font-size: 45px;
+}
+@media screen and (max-width: 480px) {
+  .conteiner-header .conteiner-logo-nombre .nombre {
+    display: none;
+  }
+}
+
+.conteiner-menu {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 225, 225, 0));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  height: 100vh;
+  width: 100%;
+}
+.conteiner-menu .conteiner-nombre-logo-desplegado {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  align-items: center;
+  text-align: center;
+  border: 1px solid white;
+  background: #012030;
+}
+.conteiner-menu .conteiner-nombre-logo-desplegado .logo-des {
+  height: 60px;
+  width: 60px;
+  background: #DBF227;
+}
+.conteiner-menu .conteiner-nombre-logo-desplegado .titulo-des {
+  color: yellow;
+  font-size: 40px;
+  text-shadow: black 2px 2px;
+  font-family: "Edu AU VIC WA NT Hand";
+}
+
+.conteiner-cuerpo-menu {
+  height: 100%;
+  width: 100%;
+}
+.conteiner-cuerpo-menu .links-menu {
+  text-align: center;
+  width: 300px;
+  margin: 10px;
+  margin-left: 10px;
+  padding: 5px;
+  background: #014034;
+  font-family: "Edu AU VIC WA NT Hand";
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #DBF227;
+}
+@media screen and (min-width: 345px) {
+  .conteiner-cuerpo-menu .links-menu {
+    margin-left: 30px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .conteiner-cuerpo-menu .links-menu {
+    margin-left: 50px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .conteiner-cuerpo-menu .links-menu {
+    font-size: 25px;
+  }
+}
+.conteiner-cuerpo-menu .links-menu i {
+  margin-right: 5px;
+}
+.conteiner-cuerpo-menu .sub-menu {
+  width: 280px;
+  margin-left: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 225, 225, 0));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid white black;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+@media screen and (min-width: 345px) {
+  .conteiner-cuerpo-menu .sub-menu {
+    margin-left: 40px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .conteiner-cuerpo-menu .sub-menu {
+    margin-left: 60px;
+  }
+}
+.conteiner-cuerpo-menu .sub-menu .links-sub-menu {
+  font-size: 10px;
+  font-family: "Edu AU VIC WA NT Hand";
+  text-transform: uppercase;
+  color: #DBF227;
+  text-align: center;
+  background: #014034;
+}
+@media screen and (min-width: 1024px) {
+  .conteiner-cuerpo-menu .sub-menu .links-sub-menu {
+    font-size: 18px;
+  }
+}
+
+.conteiner-tarjeta {
+  background: #D6D58E;
+  border: 1px solid black;
+  margin: 5px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 50px auto;
+  grid-template-areas: "titu-tarjeta" "cuerpo-tarjeta";
+}
+.conteiner-tarjeta .conteiner-titulo-tarjeta {
+  grid-area: titu-tarjeta;
+  background: #A3AB78;
+  border: 1px solid black;
+}
+.conteiner-tarjeta .conteiner-titulo-tarjeta h3 {
+  text-transform: uppercase;
+  font-family: "Edu AU VIC WA NT Hand";
+  color: #1F0802;
+}
+.conteiner-tarjeta .conteiner-image-info {
+  border: 1px solid black;
+  grid-area: cuerpo-tarjeta;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-auto-rows: auto;
+  grid-template-areas: "imagen descri";
+}
+.conteiner-tarjeta .conteiner-image-info .conteiner-img-tarjeta {
+  grid-area: imagen;
+  text-align: center;
+  align-content: center;
+  border: 1px solid black;
+}
+.conteiner-tarjeta .conteiner-image-info .conteiner-img-tarjeta .copa {
+  width: 100px;
+  height: 100px;
+}
+.conteiner-tarjeta .conteiner-image-info .info-copa {
+  grid-area: descri;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-content: center;
+  font-family: "Edu AU VIC WA NT Hand";
+  text-transform: uppercase;
+}
+
+.tarjeta {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+@media screen and (min-width: 2500px) {
+  .tarjeta {
+    height: 1200px;
+  }
+}
+.tarjeta img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.tarjeta .face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  overflow: hidden;
+  transition: 0.5s;
+  border: 10px solid #275950;
+}
+.tarjeta:hover .font {
+  transform: perspective(600px) rotateY(180deg);
+}
+.tarjeta:hover .back {
+  transform: perspective(600px) rotateY(360deg);
+}
+.tarjeta .font {
+  transform: perspective(600px) rotateX(0deg);
+  box-shadow: 0px 5px 10px #000;
+}
+.tarjeta .back {
+  transform: perspective(600px) rotateY(180deg);
+  background: rgba(3, 35, 34, 0.815);
+  padding: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+.tarjeta .back h3 {
+  font-family: "Anton SC", sans-serif;
+  color: #DBF227;
+}
+.tarjeta .back p {
+  font-family: "Edu AU VIC WA NT Hand";
+  font-size: 25px;
+}
+.tarjeta .back p a {
+  text-decoration: none;
+  color: white;
+}
+.tarjeta .back p a:hover {
+  color: #DBF227;
+}
+
+.conteiner-footer-principal {
+  background: #161F30;
+}
+.conteiner-footer-principal .footer-logo {
+  height: 100px;
+  width: 100px;
+  margin-top: 20px;
+}
+.conteiner-footer-principal h6 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  color: #84B026;
+  font-family: "Edu AU VIC WA NT Hand";
+  text-transform: uppercase;
+}
+.conteiner-footer-principal .info {
+  color: #84B026;
+}
+.conteiner-footer-principal .info a {
+  text-decoration: none;
+  color: #84B026;
+}
+.conteiner-footer-principal .nav-link {
+  font-size: 1rem;
+  font-family: "Edu AU VIC WA NT Hand";
+  text-transform: uppercase;
+  color: rgba(97, 97, 77, 0.8823529412);
+}
+.conteiner-footer-principal .nav-link:hover {
+  color: #DBF227;
+}
+@media screen and (min-width: 768px) {
+  .conteiner-footer-principal .nav-link {
+    width: 140px;
+  }
+}
+.conteiner-footer-principal .info {
+  font-family: "Edu AU VIC WA NT Hand";
+  text-transform: uppercase;
+}
+.conteiner-footer-principal .info a {
+  color: #DBF227;
+}
+.conteiner-footer-principal .social-icons a {
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: #84B026;
+  transition: color 0.3s;
+}
+.conteiner-footer-principal .social-icons a:hover {
+  color: blue;
+}
+.conteiner-footer-principal .social-icons a:hover .Twitter {
+  color: #217373;
+}
+.conteiner-footer-principal .social-icons a:hover .Instagram {
+  color: orange;
+}
+
+iframe {
+  width: 100%;
+  height: 480px;
+  border: 10px solid #275950;
+}
+@media screen and (min-width: 2500px) {
+  iframe {
+    height: 1200px;
+    height: 1200px;
+  }
+}
+
+.conteiner-redes {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: #012030;
+  border-top: 1px solid white;
+}
+.conteiner-redes .redes {
+  margin-left: 20px;
+  height: 3rem;
+  width: 3rem;
+  background: #005C53;
+  text-align: center;
+  align-content: center;
+  font-size: 25px;
+  border-radius: 50px;
+  position: relative;
+  color: #DBF227;
+}
+.conteiner-redes .redes:hover {
+  color: blue;
+}
+.conteiner-redes .redes:hover .ig {
+  color: orange;
+}
+.conteiner-redes .redes:hover .twi {
+  color: black;
+}
+
+.principal {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 170px auto;
+  grid-template-areas: "titulo-home" "contenido-home";
+}
+.principal .conteiner-titulo-seccion {
+  grid-area: titulo-home;
+  text-align: center;
+  align-content: center;
+  z-index: 111;
+}
+.principal .conteiner-titulo-seccion .titulo {
+  width: 80%;
+  margin-left: 20px;
+  color: #DBF227;
+  font-size: 30px;
+  text-shadow: black 2px 2px;
+  font-family: "Seymour One", sans-serif;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: infinite;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .principal .conteiner-titulo-seccion .titulo {
+    width: 90%;
+    font-size: 40px;
+    margin-left: 40px;
+    color: #DBF227;
+  }
+}
+.principal .conteiner-descripcion {
+  grid-area: contenido-home;
+  z-index: 111;
+}
+@media screen and (min-width: 2500px) {
+  .principal .conteiner-descripcion {
+    margin-top: 50px;
+  }
+}
+.principal .conteiner-descripcion .detalles {
+  font-size: 20px;
+  margin: 10px;
+  margin-top: 10px;
+  color: white;
+}
+.principal .conteiner-descripcion .detalles strong {
+  color: #DBF227;
+}
+
+#trayectoria {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px auto;
+  grid-template-areas: "titulo-trayectoria" "contenido-trayectoria";
+  row-gap: 10px;
+}
+#trayectoria .conteiner-titulo-tra {
+  grid-area: titulo-trayectoria;
+  background: #005C53;
+  text-align: center;
+  align-content: center;
+}
+#trayectoria .conteiner-titulo-tra h1 {
+  text-shadow: black 2px 2px;
+  font-family: "Seymour One", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  #trayectoria .conteiner-titulo-tra h1 {
+    text-transform: uppercase;
+    font-size: 35px;
+  }
+}
+#trayectoria .conteiner-titulo-tra .titulo-trayectoria {
+  color: #DBF227;
+  font-size: 30px;
+}
+#trayectoria .conteiner-trayectoria-info {
+  grid-area: contenido-trayectoria;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "uno" "dos" "tres";
+  margin: 0 10px;
+}
+#trayectoria .conteiner-trayectoria-info .conteiner-detalles1 {
+  grid-area: uno;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "imag" "descri";
+  row-gap: 10px;
+  margin: 10px;
+}
+@media screen and (min-width: 768px) {
+  #trayectoria .conteiner-trayectoria-info .conteiner-detalles1 {
+    grid-template-columns: 1/2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "imag descri";
+    column-gap: 10px;
+  }
+}
+#trayectoria .conteiner-trayectoria-info .conteiner-detalles1 .conteiner-escudo {
+  grid-area: imag;
+  background: #042940;
+  text-align: center;
+  align-content: center;
+  border: 1px solid black;
+}
+#trayectoria .conteiner-trayectoria-info .conteiner-detalles1 .detalle {
+  grid-area: descri;
+  border: 1px solid black;
+  background: #A3AB78;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px auto;
+  grid-template-areas: "sub-tit" "det-p";
+}
+#trayectoria .conteiner-trayectoria-info .conteiner-detalles1 .detalle .conteiner-titulo-det {
+  grid-area: sub-tit;
+  background: #D6D58E;
+  font-family: "Seymour One", sans-serif;
+  border: 1px solid black;
+  color: rgba(36, 41, 18, 0.7137254902);
+  text-align: center;
+  align-content: center;
+}
+#trayectoria .conteiner-trayectoria-info .conteiner-detalles1 .detalle .conteiner-titulo-det h2 {
+  color: #042940;
+}
+#trayectoria .conteiner-trayectoria-info .conteiner-detalles1 .detalle .detalle-parrafo {
+  grid-area: det-p;
+}
+#trayectoria .conteiner-trayectoria-info .conteiner-detalles2 {
+  grid-area: dos;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "imag" "descri";
+  row-gap: 10px;
+  margin: 10px;
+}
+@media screen and (min-width: 768px) {
+  #trayectoria .conteiner-trayectoria-info .conteiner-detalles2 {
+    grid-template-columns: 1/2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "imag descri";
+    column-gap: 10px;
+  }
+}
+#trayectoria .conteiner-trayectoria-info .conteiner-detalles2 .conteiner-escudo {
+  grid-area: imag;
+  background: #042940;
+  text-align: center;
+  align-content: center;
+  border: 1px solid black;
+}
+#trayectoria .conteiner-trayectoria-info .conteiner-detalles2 .detalle {
+  grid-area: descri;
+  border: 1px solid black;
+  background: #A3AB78;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px auto;
+  grid-template-areas: "sub-tit" "det-p";
+}
+#trayectoria .conteiner-trayectoria-info .conteiner-detalles2 .detalle .conteiner-titulo-det {
+  grid-area: sub-tit;
+  background: #D6D58E;
+  font-family: "Seymour One", sans-serif;
+  border: 1px solid black;
+  color: rgba(36, 41, 18, 0.7137254902);
+  text-align: center;
+  align-content: center;
+}
+#trayectoria .conteiner-trayectoria-info .conteiner-detalles2 .detalle .conteiner-titulo-det h2 {
+  color: #042940;
+}
+#trayectoria .conteiner-trayectoria-info .conteiner-detalles2 .detalle .detalle-parrafo {
+  grid-area: det-p;
+}
+#trayectoria .conteiner-trayectoria-info .conteiner-detalles3 {
+  grid-area: tres;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "imag" "descri";
+  row-gap: 10px;
+  margin: 10px;
+}
+@media screen and (min-width: 768px) {
+  #trayectoria .conteiner-trayectoria-info .conteiner-detalles3 {
+    grid-template-columns: 1/2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "imag descri";
+    column-gap: 10px;
+  }
+}
+#trayectoria .conteiner-trayectoria-info .conteiner-detalles3 .conteiner-escudo {
+  grid-area: imag;
+  background: #042940;
+  text-align: center;
+  align-content: center;
+  border: 1px solid black;
+}
+#trayectoria .conteiner-trayectoria-info .conteiner-detalles3 .detalle {
+  grid-area: descri;
+  border: 1px solid black;
+  background: #A3AB78;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px auto;
+  grid-template-areas: "sub-tit" "det-p";
+}
+#trayectoria .conteiner-trayectoria-info .conteiner-detalles3 .detalle .conteiner-titulo-det {
+  grid-area: sub-tit;
+  background: #D6D58E;
+  font-family: "Seymour One", sans-serif;
+  border: 1px solid black;
+  color: rgba(36, 41, 18, 0.7137254902);
+  text-align: center;
+  align-content: center;
+}
+#trayectoria .conteiner-trayectoria-info .conteiner-detalles3 .detalle .conteiner-titulo-det h2 {
+  color: #042940;
+}
+#trayectoria .conteiner-trayectoria-info .conteiner-detalles3 .detalle .detalle-parrafo {
+  grid-area: det-p;
+}
+#trayectoria .conteiner-trayectoria-info .escudo {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+#trayectoria .conteiner-trayectoria-info .detalle-parrafo {
+  margin: 10px;
+  max-width: 1000px;
+  font-family: "Edu AU VIC WA NT Hand";
+}
+
+#estadisticas {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px auto auto;
+  grid-template-areas: "titulo-estadistica" "contenido-1-estadistica" "contenido-2-estadistica";
+  row-gap: 10px;
+}
+#estadisticas .conteiner-titulo-sec {
+  grid-area: titulo-estadistica;
+  width: 100%;
+  background: #005C53;
+  text-align: center;
+  align-content: center;
+}
+#estadisticas .conteiner-titulo-sec h1 {
+  color: #DBF227;
+  text-shadow: black 2px 2px;
+  font-family: "Seymour One", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  #estadisticas .conteiner-titulo-sec h1 {
+    text-transform: uppercase;
+    font-size: 35px;
+  }
+}
+#estadisticas .Nivel-club {
+  margin: 10px;
+  grid-area: contenido-1-estadistica;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px auto;
+  grid-template-areas: "tit-niv" "tab";
+  row-gap: 10px;
+}
+#estadisticas .Nivel-club .conteiner-sub-titulo {
+  grid-area: tit-niv;
+  background: #10454F;
+  text-align: center;
+  align-content: center;
+}
+#estadisticas .Nivel-club .conteiner-sub-titulo h2 {
+  color: #9FC131;
+  font-family: "Seymour One", sans-serif;
+  text-transform: uppercase;
+}
+#estadisticas .Nivel-club .conteiner-tabla {
+  grid-area: tab;
+}
+#estadisticas .Nivel-club .conteiner-tabla .table {
+  text-align: center;
+}
+#estadisticas .Nivel-club .conteiner-tabla .table tr .tbla-encabezado {
+  color: #9FC131;
+  font-family: "Edu AU VIC WA NT Hand";
+  font-size: 20px;
+  text-align: center;
+  align-content: center;
+}
+#estadisticas .Nivel-club .conteiner-tabla .table tr .table-warning {
+  color: #260101;
+  text-transform: uppercase;
+  text-align: center;
+}
+#estadisticas .Nivel-club .conteiner-tabla .table tr .table-danger {
+  color: #260101;
+  text-transform: uppercase;
+  text-align: center;
+}
+#estadisticas .Nivel-club .conteiner-tabla .table tr .table-info {
+  text-align: center;
+  align-content: center;
+}
+#estadisticas .Nivel-seleccion {
+  margin: 10px;
+  grid-area: contenido-2-estadistica;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px auto;
+  grid-template-areas: "tit-niv" "tab";
+  row-gap: 10px;
+}
+#estadisticas .Nivel-seleccion .conteiner-sub-titulo {
+  grid-area: tit-niv;
+  background: #10454F;
+  text-align: center;
+  align-content: center;
+}
+#estadisticas .Nivel-seleccion .conteiner-sub-titulo h2 {
+  color: #9FC131;
+  font-family: "Seymour One", sans-serif;
+  text-transform: uppercase;
+}
+#estadisticas .Nivel-seleccion .conteiner-tabla {
+  grid-area: tab;
+}
+#estadisticas .Nivel-seleccion .conteiner-tabla .table {
+  text-align: center;
+}
+#estadisticas .Nivel-seleccion .conteiner-tabla .table tr .tbla-encabezado {
+  color: #9FC131;
+  font-family: "Edu AU VIC WA NT Hand";
+  font-size: 20px;
+  text-align: center;
+  align-content: center;
+}
+#estadisticas .Nivel-seleccion .conteiner-tabla .table tr .table-warning {
+  color: #260101;
+  text-transform: uppercase;
+  text-align: center;
+}
+#estadisticas .Nivel-seleccion .conteiner-tabla .table tr .table-danger {
+  color: #260101;
+  text-transform: uppercase;
+  text-align: center;
+}
+#estadisticas .Nivel-seleccion .conteiner-tabla .table tr .table-info {
+  text-align: center;
+  align-content: center;
+}
+#estadisticas .Nivel-seleccion .conteiner-detalle {
+  background: #D6D58E;
+}
+#estadisticas .Nivel-seleccion summary {
+  text-transform: uppercase;
+}
+
+#palmares {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px auto;
+  grid-template-areas: "titulo-palmares" "contenido-1-palmares" "contenido-2-palmares" "contenido-3-palmares";
+  row-gap: 10px;
+}
+#palmares .conteiner-titulo-pal {
+  grid-area: titulo-palmares;
+  background: #005C53;
+  text-align: center;
+  align-content: center;
+}
+#palmares .conteiner-titulo-pal h1 {
+  color: #DBF227;
+  text-shadow: black 2px 2px;
+  font-family: "Seymour One", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  #palmares .conteiner-titulo-pal h1 {
+    text-transform: uppercase;
+    font-size: 35px;
+  }
+}
+#palmares .seccion-Nivel-1 {
+  grid-area: contenido-1-palmares;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px auto;
+  grid-template-areas: "sub-titulo-sec" "contemidox";
+  row-gap: 10px;
+}
+#palmares .seccion-Nivel-1 .conteiner-sub-titulo-pal {
+  grid-area: sub-titulo-sec;
+  background: #063540;
+  text-align: center;
+  align-content: center;
+}
+#palmares .seccion-Nivel-1 .conteiner-sub-titulo-pal h2 {
+  color: #9FC131;
+  font-family: "Seymour One", sans-serif;
+  text-transform: uppercase;
+}
+#palmares .seccion-Nivel-1 .conteiner-sec {
+  grid-area: contemidox;
+  background: #9FC131;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+}
+@media screen and (min-width: 600px) {
+  #palmares .seccion-Nivel-1 .conteiner-sec {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #palmares .seccion-Nivel-1 .conteiner-sec {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 2560px) {
+  #palmares .seccion-Nivel-1 .conteiner-sec {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+#palmares .seccion-Nivel-2 {
+  grid-area: contenido-2-palmares;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px auto;
+  grid-template-areas: "sub-titulo-sec" "contemidox";
+  row-gap: 10px;
+}
+#palmares .seccion-Nivel-2 .conteiner-sub-titulo-pal {
+  grid-area: sub-titulo-sec;
+  background: #063540;
+  text-align: center;
+  align-content: center;
+}
+#palmares .seccion-Nivel-2 .conteiner-sub-titulo-pal h2 {
+  color: #9FC131;
+  font-family: "Seymour One", sans-serif;
+  text-transform: uppercase;
+}
+#palmares .seccion-Nivel-2 .conteiner-sec {
+  grid-area: contemidox;
+  background: #9FC131;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+}
+@media screen and (min-width: 600px) {
+  #palmares .seccion-Nivel-2 .conteiner-sec {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #palmares .seccion-Nivel-2 .conteiner-sec {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 2560px) {
+  #palmares .seccion-Nivel-2 .conteiner-sec {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+#palmares .seccion-Nivel-3 {
+  grid-area: contenido-3-palmares;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px auto;
+  grid-template-areas: "sub-titulo-sec" "contemidox";
+  row-gap: 10px;
+}
+#palmares .seccion-Nivel-3 .conteiner-sub-titulo-pal {
+  grid-area: sub-titulo-sec;
+  background: #063540;
+  text-align: center;
+  align-content: center;
+}
+#palmares .seccion-Nivel-3 .conteiner-sub-titulo-pal h2 {
+  color: #9FC131;
+  font-family: "Seymour One", sans-serif;
+  text-transform: uppercase;
+}
+#palmares .seccion-Nivel-3 .conteiner-sec {
+  grid-area: contemidox;
+  background: #9FC131;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+}
+@media screen and (min-width: 600px) {
+  #palmares .seccion-Nivel-3 .conteiner-sec {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #palmares .seccion-Nivel-3 .conteiner-sec {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 2560px) {
+  #palmares .seccion-Nivel-3 .conteiner-sec {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+#palmares .conteiner-titulo-tarjeta {
+  align-content: center;
+}
+#palmares .conteiner-titulo-tarjeta .titulo-tarjeta {
+  text-align: center;
+  font-size: 20px;
+}
+
+#galeria {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px auto auto;
+  grid-template-areas: "titulo-galeria" "contenido-1-galeria" "contenido-2-galeria";
+  row-gap: 10px;
+}
+#galeria .conteiner-titulo-galeria {
+  grid-area: titulo-galeria;
+  background: #005C53;
+  text-align: center;
+  align-content: center;
+}
+#galeria .conteiner-titulo-galeria h1 {
+  color: #DBF227;
+  text-shadow: black 2px 2px;
+  font-family: "Seymour One", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  #galeria .conteiner-titulo-galeria h1 {
+    text-transform: uppercase;
+    font-size: 35px;
+  }
+}
+#galeria .seccion-Imagenes {
+  grid-area: contenido-1-galeria;
+  background: #506266;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px auto;
+  grid-template-areas: "t" "s";
+  row-gap: 10px;
+}
+#galeria .seccion-Imagenes .conteiner-subtitulo-galeria {
+  grid-area: t;
+  background: #063540;
+  text-align: center;
+  align-content: center;
+}
+#galeria .seccion-Imagenes .conteiner-subtitulo-galeria h2 {
+  color: #9FC131;
+  font-family: "Seymour One", sans-serif;
+  text-transform: uppercase;
+}
+#galeria .seccion-Imagenes .seccion-tarjetas {
+  grid-area: s;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  #galeria .seccion-Imagenes .seccion-tarjetas {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #galeria .seccion-Imagenes .seccion-tarjetas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 2500px) {
+  #galeria .seccion-Imagenes .seccion-tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+#galeria .seccion-videos {
+  grid-area: contenido-2-galeria;
+  background: #506266;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px auto;
+  grid-template-areas: "t" "s";
+  row-gap: 10px;
+}
+#galeria .seccion-videos .conteiner-subtitulo-galeria {
+  grid-area: t;
+  background: #063540;
+  text-align: center;
+  align-content: center;
+}
+#galeria .seccion-videos .conteiner-subtitulo-galeria h2 {
+  color: #9FC131;
+  font-family: "Seymour One", sans-serif;
+  text-transform: uppercase;
+}
+#galeria .seccion-videos .seccion-tarjetas {
+  grid-area: s;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  #galeria .seccion-videos .seccion-tarjetas {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #galeria .seccion-videos .seccion-tarjetas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 2500px) {
+  #galeria .seccion-videos .seccion-tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+#formulario-page {
+  display: grid;
+  background: #9FC131;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "introduccion" "contenido-formulario";
+}
+@media screen and (min-width: 768px) {
+  #formulario-page {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "introduccion contenido-formulario";
+  }
+}
+@media screen and (min-width: 1024px) {
+  #formulario-page {
+    height: 100vh;
+  }
+}
+#formulario-page .conteiner-descripcion-formulario {
+  grid-area: introduccion;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "tituloxx" "intro";
+  background: #D6D58E;
+  font-family: "Edu AU VIC WA NT Hand";
+}
+@media screen and (min-width: 768px) {
+  #formulario-page .conteiner-descripcion-formulario {
+    margin: 50px;
+    margin-right: 0;
+  }
+}
+#formulario-page .conteiner-descripcion-formulario .conteiner-titulo-des {
+  grid-area: tituloxx;
+  margin: 20px;
+}
+@media screen and (min-width: 2500px) {
+  #formulario-page .conteiner-descripcion-formulario .conteiner-titulo-des {
+    margin-top: 100px;
+  }
+}
+#formulario-page .conteiner-descripcion-formulario .conteiner-titulo-des h1 {
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: infinite;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 320px) {
+  #formulario-page .conteiner-descripcion-formulario .conteiner-titulo-des h1 {
+    font-size: 20px;
+  }
+}
+#formulario-page .conteiner-descripcion-formulario .formu-des {
+  grid-area: intro;
+  margin: 20px;
+}
+@media screen and (min-width: 768px) {
+  #formulario-page .conteiner-descripcion-formulario .formu-des {
+    margin-top: -140px;
+  }
+}
+#formulario-page .conteiner-descripcion-formulario .formu-des p {
+  text-align: center;
+  margin: 5px;
+  font-family: "Edu AU VIC WA NT Hand";
+}
+@media screen and (min-width: 1024px) {
+  #formulario-page .conteiner-descripcion-formulario .formu-des p {
+    font-size: 25px;
+    margin-top: 50px;
+  }
+}
+@media screen and (min-width: 2500px) {
+  #formulario-page .conteiner-descripcion-formulario .formu-des p {
+    font-size: 30px;
+  }
+}
+#formulario-page .conteiner-formulario {
+  grid-area: contenido-formulario;
+  text-align: center;
+  background: #D6D58E;
+  font-family: "Edu AU VIC WA NT Hand";
+}
+@media screen and (min-width: 768px) {
+  #formulario-page .conteiner-formulario {
+    margin: 50px;
+    margin-left: 0;
+  }
+}
+#formulario-page .conteiner-formulario .formulario {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
+  row-gap: 20px;
+  justify-items: center;
+  margin: 10px;
+}
+@media screen and (min-width: 1024px) {
+  #formulario-page .conteiner-formulario .formulario {
+    margin: 20px;
+  }
+}
+@media screen and (min-width: 2500px) {
+  #formulario-page .conteiner-formulario .formulario {
+    margin-top: 200px;
+  }
+}
+#formulario-page .conteiner-formulario .formulario legend {
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-family: "Edu AU VIC WA NT Hand";
+}
+#formulario-page .conteiner-formulario .formulario .divisor {
+  width: 300px;
+}
+@media screen and (min-width: 2500px) {
+  #formulario-page .conteiner-formulario .formulario .divisor {
+    width: 600px;
+  }
+}
+#formulario-page .conteiner-formulario .formulario textarea {
+  width: 290px;
+  resize: none;
+}
+@media screen and (min-width: 1024px) {
+  #formulario-page .conteiner-formulario .formulario textarea {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #formulario-page .conteiner-formulario .formulario textarea {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 2500px) {
+  #formulario-page .conteiner-formulario .formulario textarea {
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .principal .conteiner-titulo-seccion .titulo {
+    width: 50%;
+    margin: 0px 150px;
+  }
+  .principal .conteiner-descripcion {
+    align-content: center;
+    align-items: center;
+  }
+  .principal .conteiner-descripcion .detalles {
+    margin: -10px 10px;
+    font-size: 30px;
+    color: white;
+  }
+  .principal .conteiner-descripcion .detalles strong {
+    margin-left: 10px;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .conteiner-descripcion .detalles {
+    font-size: 50px;
+  }
+  .conteiner-descripcion .detalles strong {
+    margin-left: 60px;
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .principal .conteiner-titulo-seccion .titulo {
+    font-size: 70px;
+    width: 50%;
+    margin: 0px 150px;
+  }
+  .principal .conteiner-descripcion .detalles {
+    font-size: 35px;
+    margin-left: 50px;
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .principal .conteiner-descripcion .detalles {
+    font-size: 35px;
+    margin-left: 50px;
+    margin-top: 110px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .conteiner-descripcion .detalles {
+    font-size: 35px;
+    margin-left: 50px;
+    margin-top: 110px;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .principal .conteiner-titulo-seccion .titulo {
+    font-size: 200px;
+    width: 50%;
+    margin: 100px 350px;
+  }
+  .principal .conteiner-descripcion .detalles {
+    font-size: 75px;
+    margin-left: 50px;
+    margin-top: 210px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

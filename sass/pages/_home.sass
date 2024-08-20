@@ -1,0 +1,47 @@
+
+.principal
+    //divido la seccion principal en 2 
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 170px auto 
+    grid-template-areas: "titulo-home" "contenido-home"
+    //contenedor del Titulo, titulo centrado
+    .conteiner-titulo-seccion
+        grid-area: titulo-home
+        text-align: center
+        align-content: center
+        z-index: 111
+        //titulo
+        .titulo 
+            width: 80%
+            margin-left: 20px
+            color: $color-amarillo
+            font-size: 30px
+            text-shadow: black 2px 2px
+            font-family: $titulo-home
+            @include animacion-home
+            text-transform: uppercase
+            // text-align: center
+            @media screen and (min-width: 768px)
+                width: 90%
+                font-size: 40px
+                margin-left: 40px
+                color: $color-amarillo
+            
+    
+
+    //Descripcion
+    .conteiner-descripcion
+        grid-area: contenido-home
+        z-index: 111
+        @media screen and (min-width:2500px)
+                margin-top: 50px
+        //detalles
+        .detalles
+            font-size: 20px
+            margin: 10px
+            margin-top: 10px
+            color: #ffff
+            strong
+                color: $color-amarillo
+

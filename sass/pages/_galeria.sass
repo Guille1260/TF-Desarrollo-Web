@@ -1,0 +1,28 @@
+#galeria
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 70px auto auto 
+    grid-template-areas: "titulo-galeria" "contenido-1-galeria" "contenido-2-galeria"
+    row-gap: 10px
+    .conteiner-titulo-galeria
+        grid-area: titulo-galeria
+        background: $color-subtitulos
+        @include titulos
+        h1
+            color: $color-amarillo
+            text-shadow: black 2px 2px
+            font-family: $titulo-home
+            @media screen and (min-width: 768px)
+                text-transform: uppercase
+                font-size: 35px
+    .seccion-Imagenes
+        grid-area: contenido-1-galeria
+        background: #506266
+        @include galeria-seccion
+    .seccion-videos
+        
+        grid-area: contenido-2-galeria
+        background: #506266
+        @include galeria-seccion
+        
+    

@@ -1,0 +1,35 @@
+#estadisticas
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 70px auto auto 
+    grid-template-areas: "titulo-estadistica" "contenido-1-estadistica" "contenido-2-estadistica"
+    row-gap: 10px
+    .conteiner-titulo-sec
+        grid-area: titulo-estadistica
+        width: 100%
+        background: $color-subtitulos
+        @include titulos
+        h1
+            color: $color-amarillo
+            text-shadow: black 2px 2px
+            font-family: $titulo-home
+            @media screen and (min-width: 768px)
+                text-transform: uppercase
+                font-size: 35px
+    .Nivel-club
+        margin: 10px
+        grid-area: contenido-1-estadistica
+        @include niveles-estadistica
+
+    .Nivel-seleccion
+        margin: 10px
+        grid-area: contenido-2-estadistica
+        @include niveles-estadistica
+        .conteiner-detalle
+            background: #D6D58E
+        summary
+            text-transform: uppercase
+       
+            
+        
+                

@@ -1,0 +1,173 @@
+//utilizado para el tamaño de los logos
+@mixin tam-logo
+    height: 60px
+    width: 60px 
+    align-items: center
+//difuminado de la sidebar
+@mixin bg-difum
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 225, 225, 0))
+    backdrop-filter: blur(20px)
+    -webkit-backdrop-filter: blur(20px)
+//alinear titulos de las pages
+@mixin titulos
+    text-align: center
+    align-content: center
+    
+    
+//page trayectoria  
+//divide la seccion de detalles
+@mixin informacion-trayectoria
+    display: grid
+    grid-template-columns:  1fr
+    grid-template-rows: 70px auto
+    grid-template-areas: "sub-tit" "det-p"
+    //titulo del equipo
+    .conteiner-titulo-det
+        grid-area: sub-tit
+        background: #D6D58E
+        font-family: $titulo-home
+        border: 1px solid black
+        color: #242912b6
+        @include titulos
+        h2
+            color: #042940
+            
+    //descripcion
+    .detalle-parrafo
+        grid-area: det-p
+        
+//divide las 2 partes de escudo y su detalle
+@mixin detatlles-trayectoria
+    display: grid
+    grid-template-columns:  auto auto 
+    grid-template-rows: auto auto
+    grid-template-areas: "imag" "descri"
+    row-gap: 10px
+    margin:  10px
+    @media screen and ( min-width:768px ) 
+        grid-template-columns:  1/2fr 1fr  
+        grid-template-rows: auto 
+        grid-template-areas: "imag descri"
+        column-gap: 10px
+
+    .conteiner-escudo
+        grid-area: imag
+        background: #042940
+        text-align: center
+        align-content: center
+        border: 1px solid black
+    .detalle
+        grid-area: descri
+        border: 1px solid black
+        background: #A3AB78
+        @include informacion-trayectoria
+
+
+//page estadisticas
+//divide em dos cada seccion, domde la primera es el titulo y la 2da es una tabla
+@mixin niveles-estadistica
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 70px auto
+    grid-template-areas:"tit-niv" "tab"
+    row-gap: 10px
+    .conteiner-sub-titulo
+        grid-area: tit-niv
+        background: #10454F
+        @include titulos
+        h2
+            color: #9FC131
+            font-family: $titulo-home
+            text-transform: uppercase
+    .conteiner-tabla
+        grid-area: tab
+        .table
+            text-align:  center
+            tr
+                .tbla-encabezado
+                    color: #9FC131
+                    font-family: $tra-des-family
+                    font-size: 20px
+                    text-align: center
+                    align-content: center
+                .table-warning
+                    color: #260101
+                    text-transform: uppercase
+                    text-align: center
+                .table-danger
+                    color: #260101
+                    text-transform: uppercase
+                    text-align: center
+                .table-info
+                    text-align: center
+                    align-content: center
+            
+            
+//page palmares
+// se divide la seccion en titulo y contenido
+@mixin section-tarjetas-palmares
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows:  auto
+    grid-gap: 10px
+    @media screen and ( min-width:600px )
+        grid-template-columns: 1fr 1fr
+    @media screen and ( min-width:1024px )
+        grid-template-columns: 1fr 1fr 1fr
+    @media screen and ( min-width: 2560px ) 
+        grid-template-columns: repeat(4,1fr)
+@mixin palmares-secciones
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 70px auto
+    grid-template-areas: "sub-titulo-sec"  "contemidox"
+    row-gap: 10px
+    .conteiner-sub-titulo-pal
+        grid-area: sub-titulo-sec
+        background: #063540
+        @include titulos
+        h2
+            color: #9FC131
+            font-family: $titulo-home
+            text-transform: uppercase
+    .conteiner-sec
+        grid-area: contemidox
+        background: #9FC131
+        @include  section-tarjetas-palmares
+    
+//page galeria
+//imanes
+@mixin imagenes
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows:  auto
+    grid-gap: 10px
+    @media screen and (min-width:768px)
+        grid-template-columns: 1fr 1fr
+    @media screen and (min-width:1024px)
+        grid-template-columns: repeat(3,1fr)
+    @media screen and (min-width:2500px)
+        grid-template-columns: repeat(2,1fr)
+    
+
+//seccion de imagenes y titulos
+@mixin galeria-seccion
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 70px auto
+    grid-template-areas: "t" "s"
+    row-gap: 10px
+    .conteiner-subtitulo-galeria
+        grid-area: t
+        background: #063540
+        @include titulos
+        h2
+            color: #9FC131
+            font-family: $titulo-home
+            text-transform: uppercase
+    .seccion-tarjetas
+        grid-area: s
+        @include imagenes
+        
+     
+    

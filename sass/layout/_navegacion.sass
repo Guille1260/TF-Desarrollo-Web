@@ -1,0 +1,43 @@
+// links de navegacion 
+.conteiner-cuerpo-menu
+    height: 100%
+    width: 100%
+    .links-menu
+        text-align: center
+        width: 300px
+        margin: 10px
+        margin-left: 10px
+        padding: 5px
+        background: #014034
+        font-family: $tra-des-family
+        text-transform: uppercase
+        font-size: 15px
+        color: #DBF227
+        @media screen and ( min-width:345px )
+            margin-left: 30px
+        @media screen and ( min-width:425px )
+            margin-left: 50px
+        @media screen and ( min-width:1024px )
+            font-size: 25px
+        i
+            margin-right: 5px
+    .sub-menu
+        width: 280px
+        margin-left: 20px
+        @include bg-difum
+        border: 1px solid white black
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37)
+        @media screen and ( min-width:345px )
+            margin-left: 40px
+        @media screen and ( min-width:425px )
+            margin-left: 60px
+        
+        .links-sub-menu
+            font-size: 10px
+            font-family: $tra-des-family
+            text-transform: uppercase
+            color: #DBF227
+            text-align: center
+            background: #014034
+            @media screen and ( min-width:1024px )
+                font-size: 18px
