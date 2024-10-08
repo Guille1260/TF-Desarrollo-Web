@@ -815,6 +815,7 @@ iframe {
   grid-template-rows: 70px auto;
   grid-template-areas: "sub-titulo-sec" "contemidox";
   row-gap: 10px;
+  margin: 0px 10px;
 }
 #palmares .seccion-Nivel-1 .conteiner-sub-titulo-pal {
   grid-area: sub-titulo-sec;
@@ -857,6 +858,7 @@ iframe {
   grid-template-rows: 70px auto;
   grid-template-areas: "sub-titulo-sec" "contemidox";
   row-gap: 10px;
+  margin: 0px 10px;
 }
 #palmares .seccion-Nivel-2 .conteiner-sub-titulo-pal {
   grid-area: sub-titulo-sec;
@@ -899,6 +901,7 @@ iframe {
   grid-template-rows: 70px auto;
   grid-template-areas: "sub-titulo-sec" "contemidox";
   row-gap: 10px;
+  margin: 0px 10px;
 }
 #palmares .seccion-Nivel-3 .conteiner-sub-titulo-pal {
   grid-area: sub-titulo-sec;
@@ -974,6 +977,7 @@ iframe {
   grid-template-rows: 70px auto;
   grid-template-areas: "t" "s";
   row-gap: 10px;
+  margin: 0px 10px;
 }
 #galeria .seccion-Imagenes .conteiner-subtitulo-galeria {
   grid-area: t;
@@ -1016,6 +1020,7 @@ iframe {
   grid-template-rows: 70px auto;
   grid-template-areas: "t" "s";
   row-gap: 10px;
+  margin: 0px 10px;
 }
 #galeria .seccion-videos .conteiner-subtitulo-galeria {
   grid-area: t;

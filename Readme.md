@@ -1,41 +1,45 @@
+#  DESARROLO WEB - IKER CASILLAS
 
-<h1 > DESARROLLO WEB - IKER CASILLAS </h1>
+## 📝 Descripción
+Trabajo final del curso de Desarrollo web  
+Coderhouse 2024  
+Comisión: 57655
 
-<h2 > DESCIPCION</h2>
-    <p>
-        Trabjo final del curoso de Desarrollo web
-        Coderhouse 2024 
-        comision:57655
-    </p>
-        
-    
+## 🎯 Tema del Proyecto
 
-<h2 > Estado del proyecto</h2>
-   <p>
-        Proyecto Terminado
-    </p>
-    
+El proyecto **"IKER CASILLAS"** se centra en el desarrollo de una pagina web sobre la carrera del arquero como futbolista
+
+### Características del Tema:
+- **Interfaz amigable:** Diseño limpio y accesible que facilita la navegación.
+
+- **Responsive design:** Adaptabilidad a diferentes dispositivos, garantizando una experiencia de usuario óptima en móviles y tablets.
 
 
-# 🛠️ Abre y ejecuta el proyecto
+## 📊 Estado del Proyecto
+Proyecto en etapas finales.
 
-```
-$ git clone https://github.com/Guille1260/TF-Desarrollo-web-acuna.git
-$ cd ../path/to/the/file
-$ npm install
-$ npm init
-```
+## 🚧 Trabajo Pendiente
+A continuación, se detallan las tareas que aún deben completarse para finalizar el proyecto:
 
-<h2 > Herramientas Utilizasas</h2>
-   <p>
-        HTML
-        CSS
-        BOOSTRAP
-        SASS
-   </p>
-
-<h2 >Autor</h2>
-   Acuña Guillermo C. 
+- **Implementación de funcionalidades:**  
+  - ***Envio de comentarios por mail***
+  
+- **Optimización:**  
+  - ***Revisar y optimizar codigo***
 
 
-<h2 > Licencia</h2>
+
+Estas tareas son fundamentales para asegurar que el proyecto esté completo y listo.
+
+
+
+## 🛠️ Herramientas Utilizadas
+- **HTML**: Estructura básica del sitio web.
+- **CSS**: Estilo y diseño visual.
+- **Bootstrap**: Framework para desarrollo responsivo.
+- **SASS**: Preprocesador de CSS para facilitar el manejo de estilos.
+- **JavaScript**: funcionalidad de la pagina.
+- **Emailjs**: Envio de cuestionario
+
+## 👤 Autor
+**Acuña Guillermo Cesar.**
